@@ -1,6 +1,6 @@
-# projeler
+# Kuru Temizleme Sepeti
 
-A new Flutter project.
+Kuru Temizleme Sepeti mobil uygulama
 
 ## Getting Started
 
