@@ -15,8 +15,8 @@ class MyApp extends StatelessWidget {
       title: "Kuru Temizleme Sepeti",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          primarySwatch: Colors.deepOrange,
-          scaffoldBackgroundColor: HexColor("#e7eaf5"),
+        primarySwatch: Colors.deepOrange,
+        scaffoldBackgroundColor: HexColor("#e7eaf5"),
       ),
       home: MyHomePage(),
     );
@@ -91,11 +91,32 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("Kuru Temizleme Sepeti"),
+              Container(
+                child: Image.asset(
+                  'images/icon.png',
+                  width: 35,
+                ),
+              ),
+              Container(
+                child: SizedBox(
+                  width: w / 1.7,
+                  height: 38,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      contentPadding: EdgeInsets.only(left: 10, top: 5),
+                      hintText: "Ara..",
+                      prefixIcon: Icon(Icons.search),
+                      filled: true,
+                      fillColor: Colors.white,
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+                ),
+              ),
               IconButton(
                 icon: Icon(
                   Icons.menu,
-                  color: Colors.white,
+                  color: Colors.grey,
                 ),
                 onPressed: () {
                   Navigator.push(context,
@@ -104,7 +125,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ],
           ),
-          backgroundColor: Colors.blue,
+          backgroundColor: Colors.white,
         ),
         body: SingleChildScrollView(
           child: Column(
@@ -164,7 +185,11 @@ class _MyHomePageState extends State<MyHomePage> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Text("Ürün Sepete Eklendi",style: TextStyle(color: Colors.white,fontSize: 16),),
+                                Text(
+                                  "Ürün Sepete Eklendi",
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 16),
+                                ),
                               ],
                             ),
                           ),
