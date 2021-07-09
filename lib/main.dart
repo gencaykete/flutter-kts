@@ -5,8 +5,14 @@ import 'package:projeler/category.dart';
 import 'package:projeler/login.dart';
 import 'data/categories.dart' as categories;
 import 'bottomNavigation.dart';
+import 'package:html/parser.dart';
+import 'package:http/http.dart' as http;
 
 void main() async {
+  final response = await http.Client().get(Uri.parse("https://www.tcmb.gov.tr/wps/wcm/connect/TR/TCMB+TR/Main+Menu/Istatistikler/Enflasyon+Verileri/"));
+  var data = parse(response.body);
+  print(data.getElementsByClassName('tcmb-content')[0].children[1].text);
+
   runApp(MyApp());
 }
 
