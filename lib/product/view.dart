@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:projeler/bottomNavigation.dart';
 import 'package:projeler/main.dart';
 
 class ProductView extends StatefulWidget {
@@ -413,6 +414,7 @@ class _ProductViewState extends State<ProductView> {
           ],
         ),
       ),
+      bottomNavigationBar: CustomBottomNavigation(),
     );
   }
 }
