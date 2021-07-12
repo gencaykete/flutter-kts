@@ -45,7 +45,7 @@ class _WishlistState extends State<Wishlist> {
     double service = 0;
     double total = 0;
 
-    Helper.bottom_navigation_active_index = 1;
+    Helper.bottom_navigation_active_index = 2;
 
     var screen = MediaQuery.of(context);
 

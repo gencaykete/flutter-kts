@@ -3,6 +3,7 @@ import 'package:projeler/cart.dart';
 import 'package:projeler/category.dart';
 import 'package:projeler/main.dart';
 import 'package:projeler/Helper.dart';
+import 'package:projeler/support.dart';
 import 'package:projeler/wishlist.dart';
 
 class CustomBottomNavigation extends StatelessWidget {
@@ -43,7 +44,7 @@ class CustomBottomNavigation extends StatelessWidget {
         }else if (index == 2){
           Navigator.push(context, MaterialPageRoute(builder: (context) => Wishlist()))
         }else if (index == 3){
-
+          Navigator.push(context, MaterialPageRoute(builder: (context) => SupportPage()))
         }else if (index == 4){
 
         }
