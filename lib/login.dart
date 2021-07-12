@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:projeler/main.dart';
+import 'package:projeler/forgor-password.dart';
+import 'package:projeler/register.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -84,9 +85,24 @@ class _LoginPageState extends State<LoginPage> {
                             padding: EdgeInsets.only(top: 10),
                             child: GestureDetector(
                               onTap: () {
-                                print('şifremi unuttum tıklandı');
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => ForgotPasswordPage()));
                               },
                               child: Text("Şifremi Unuttum"),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(top: 10),
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => RegisterPage()));
+                              },
+                              child: Text("Kayıt Ol"),
                             ),
                           )
                         ],
